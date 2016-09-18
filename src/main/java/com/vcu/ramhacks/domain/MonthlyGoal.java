@@ -100,7 +100,6 @@ public class MonthlyGoal implements Serializable {
             "id=" + id +
             ", month='" + month + "'" +
             ", percentage='" + percentage + "'" +
-            ", categories='" + categoriesChosen + "'" +
             '}';
     }
 }
