@@ -11,6 +11,9 @@
         var vm = this;
 
         vm.currentMonth = null;
+        vm.savings = 350;
+        vm.numPoints = 350;
+        vm.imgSource = null;
 
         vm.account = null;
         vm.isAuthenticated = null;
@@ -19,6 +22,18 @@
         $scope.$on('authenticationSuccess', function() {
             getAccount();
         });
+
+        function determineLevel(){
+            if (numPoints<200){
+                vm.imgSource = "content/images/level-1-icon.png";
+            }
+            else if (numPoints < 500){
+                vm.imgSource = "content/images/level-1-icon.png";
+            }
+            else{
+                vm.imgSource = "content/images/level-1-icon.png";
+            }
+        }
 
         getAccount();
 

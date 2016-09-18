@@ -1,18 +1,46 @@
-<div ng-cloak>
+<div>
     <div class="row">
-        <div class="col-md-offset-3">
-            Your Savings Progress for {{vm.currentMonth}}
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Your Savings Progress for {{vm.currentMonth}}</h1>
         </div>
-        <div class="col-md-4">
-            <div>
-                This will be your monthly goal
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+
+        <stats number="6" comments="New comments!" colour="primary" type="comments"></stats>
+        <stats number="12" comments="New tasks!" colour="primary" type="user"></stats>
+        <stats number="18" comments="New orders!" colour="yellow" type="shopping-cart"></stats>
+        <stats number="24" comments="Support tickets!" colour="red" type="support"></stats>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-clock-o fa-fw"></i> Your Savings Goal for the month is ${{vm.savings}}
+                </div>
             </div>
         </div>
-        <div class="col-md-8">
-            This will be a pretty graph
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                </div>
+                <notifications></notifications>
+            </div>
         </div>
-        <div class = "col-md-4">
-            This will the points/level
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img ng-if = "vm.numPoints<200" class="center-block" src="content/images/level-1-icon.png">
+                    <img ng-if = "vm.numPoints<500 && vm.numPoints>201" class="center-block" src="content/images/level-2-icon.png">
+                    <img ng-if = "vm.numPoints>500" class="center-block" src="content/images/level-3-icon.png"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+

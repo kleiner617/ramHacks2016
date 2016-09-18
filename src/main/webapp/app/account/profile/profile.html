@@ -1,11 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    PUT SOMETHING HERE
-</head>
-<body>
+<div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>User settings for [<b>{{vm.profile.login}}</b>]</h2>
 
-</body>
-</html>
+            <div class="alert alert-success" ng-show="vm.success">
+                <strong>Settings saved!</strong>
+            </div>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <form name="form" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+                <div class="form-group">
+                    <label class="control-label" for="income">What is your income?</label>
+                    <input type="text" class="form-control" id="income" name="income" placeholder="Your monthly income"
+                           ng-model="vm.profile.income" min="1" required maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="fixedExp">Total cost fixed expenses</label>
+                    <input type="text" class="form-control" id="fixedExp" name="fixedExp" placeholder="(monthly payments, bills, etc..)"
+                           ng-model="vm.profile.fixedExp" min="0" required maxlength="50">
+                    <div ng-show="form.fixedExp.$dirty && form.fixedExp.$invalid">
+<!--                        <p class="help-block"
+                           ng-show="form.fixedExp.$error.required">
+                            Your fixed expenses is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.fixedExp.$error.minlength">
+                            Your fixed expenses is required to be at least 1 character.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.fixedExp.$error.maxlength">
+                            Your fixed expenses cannot be longer than 50 characters.
+                        </p>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="totalSavings">Total Amount you'd like to save</label>
+                    <input type="totalSavings" class="form-control" id="totalSavings" name="totalSavings" placeholder="total savings"
+                           ng-model="vm.profile.totalSavings" min="1">
+                    <div ng-show="form.totalSavings.$dirty && form.totalSavings.$invalid">
+<!--                        <p class="help-block"
+                           ng-show="form.totalSavings.$error.required">
+                            Your e-mail is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.totalSavings.$error.totalSavings">
+                            Your e-mail is invalid.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.totalSavings.$error.minlength">
+                            Your e-mail is required to be at least 5 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.totalSavings.$error.maxlength">
+                            Your e-mail cannot be longer than 100 characters.
+                        </p>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="forObject">What are you saving for?</label>
+                    <input type="forObject" class="form-control" id="forObject" name="forObject" placeholder="what are you saving for?"
+                           ng-model="vm.profile.forObject" ng-minlength=0 ng-maxlength=100 required maxlength="100">
+                    <div ng-show="form.forObject.$dirty && form.forObject.$invalid">
+                        <!--                        <p class="help-block"
+                                                   ng-show="form.forObject.$error.required">
+                                                    Your e-mail is required.
+                                                </p>
+                                                <p class="help-block"
+                                                   ng-show="form.forObject.$error.forObject">
+                                                    Your e-mail is invalid.
+                                                </p>
+                                                <p class="help-block"
+                                                   ng-show="form.forObject.$error.minlength">
+                                                    Your e-mail is required to be at least 5 characters.
+                                                </p>
+                                                <p class="help-block"
+                                                   ng-show="form.forObject.$error.maxlength">
+                                                    Your e-mail cannot be longer than 100 characters.
+                                                </p>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="months">How many months to acheive your goal?</label>
+                    <input type="number" class="form-control" name="percentage" id="field_percentage"
+                           ng-model="vm.monthlyGoal.percentage" ng-required="true" min="0" max="24"
+                    />
+                    <div ng-show="form.months.$dirty && form.months.$invalid">
+
+                    </div>
+                </div>
+                <!--<div>
+                    <label class="control-label">What categories can you cut back on?</label>
+                    <div class="form-group">
+                        <label class="control-label">Categories</label>
+                        <div ng-dropdown-multiselect="" options="categoriesdata" selected-model="vm.monthlyGoal.categories" extra-settings="categoriessettings"></div>
+                    </div>
+                </div>-->
+
+
+                <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -11,21 +11,23 @@
     stateConfig.$inject = ['$stateProvider'];
 
     function stateConfig($stateProvider) {
-        $stateProvider.state('profile', {
-            parent: 'account',
-            url: '/settings',
-            data: {
-                authorities: ['ROLE_USER'],
-                pageTitle: 'Profile'
-            },
-            /*
-            views: {
-                'content@': {
-                    templateUrl: 'app/account/profile/profile.html',
-                    controller: 'ProfileController',
-                    controllerAs: 'vm'
+        $stateProvider
+            .state('profile', {
+                parent: 'entity',
+                url: '/profile',
+                data: {
+                    authorities: ['ROLE_USER'],
+                    pageTitle: 'Profile'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'app/account/profile/profile.html',
+                        controller: 'ProfileController',
+                        controllerAs: 'vm'
+                    }
                 }
-            }*/
-        });
+            })
+        ;
     }
+
 })();
