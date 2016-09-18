@@ -25,7 +25,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="purchase in vm.purchase">
+                <tr ng-repeat="purchase in vm.purchase.slice().reverse()">
                     <td>{{purchase.type}}</td>
                     <td>{{purchase.purchaseDate}}</td>
                     <td>{{purchase.amount}}</td>
