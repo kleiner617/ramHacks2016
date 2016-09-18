@@ -11,16 +11,31 @@
     StatisticsController.$inject = ['$scope', '$state'];
 
     function StatisticsController ($scope, $state) {
-        /*var vm = this;
+    // hist plot
+        setTimeout(function(){
+            var data = {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                series: [
+                    [5, 4, 7, 7, 5, 10, 3],
+                    [4, 5, 9, 6, 4, 6, 4]
+                ]
+            };
 
-        vm.purchases = [];
+            var options = {
+                seriesBarDistance: 10
+            };
 
-        loadAll();
-
-        function loadAll() {
-            Purchase.query(function(result) {
-                vm.purchases = result;
-            });
-        }*/
+            var responsiveOptions = [
+                ['screen and (max-width: 640px)', {
+                    seriesBarDistance: 5,
+                    axisX: {
+                        labelInterpolationFnc: function (value) {
+                            return value[0];
+                        }
+                    }
+                }]
+            ];
+            new Chartist.Bar('#statsGraph', data, options, responsiveOptions);
+        }, 3000);
     }
 })();

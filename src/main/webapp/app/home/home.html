@@ -19,37 +19,54 @@
     <div class="row">
         <div class="col-lg-5">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    Your Savings Goal for the month is ${{vm.savings}}
+                <div class="row ct-chart ct-perfect-fourth" style="width: 10%; height: 100%;">
+                    <div id="homeGraph" class="col-xs-6 col-xs-offset-3 " style="padding-right: 60px;"><canvas id="graph" width="400px" height="100px" ></canvas></div>
+                </div>
+                <div style="padding-left: 20px; font-size: 14px">
+                    <span class="row" style="color: #A31515">Gas (20)</span>
+                    <span class="row" style="color: #843534">Internet (10)</span>
+                    <span class="row" style="color: #c5862b">Grocery (30)</span>
+                    <span class="row" style="color: #262626">Rent (40)</span>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading middle-text">
+                    Total Savings over 3 months is $407.08
                 </div>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Pretty graph...
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
                     <img ng-if = "vm.level == 1" class="center-block" src="content/images/level-1-icon.png">
                     <img ng-if = "vm.level == 2" class="center-block" src="content/images/level-2-icon.png">
                     <img ng-if = "vm.level == 3" class="center-block" src="content/images/level-3-icon.png">
                     <span>You are at level {{vm.level}}.  {{vm.pointsToLevel}} points until next level</span></div>
-                </div>
             </div>
         </div>
-    <div class="row">
-        <div class="col-lg-5">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Total Savings over ... months is
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default center-block">
+                <div class="panel-heading center-block" style="font-size: 30px">
+                    Your Savings Goal for the month is ${{vm.savings}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!--        <span class="button-dropdown" id="timeButton" data-buttons="dropdown">
+
+ <ul>
+     <li id="1month"><a href="#">7 Days</a></li>
+   <li id="1month"><a href="#">1 Month</a></li>
+   <li id="6month"><a href="#">6 Month</a></li>
+   <li id="1year" class="button-dropdown-divider"><a href="#">1 Year</a></li>
+ </ul>
+</span>-->
+
+</div>
+</div>
