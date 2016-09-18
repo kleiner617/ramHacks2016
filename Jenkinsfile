@@ -16,7 +16,7 @@ node {
 
     stage('npm install') {
         sh "npm install"
-        sh "npm install gulp-cli"
+        sh "npm install -g gulp-cli"
     }
 
     stage('clean') {
