@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "category",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "purchase"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "purchaseId",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "purchaseDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160918022305",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "purchase"
+}

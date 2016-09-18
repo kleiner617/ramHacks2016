@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Category.
+    -->
+    <changeSet id="20160918022306-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="purchase_id"
+                                 baseTableName="category"
+                                 constraintName="fk_category_purchase_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="purchase"/>
+
+        <addForeignKeyConstraint baseColumnNames="monthly_goal_id"
+                                 baseTableName="category"
+                                 constraintName="fk_category_monthly_goal_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="monthly_goal"/>
+
+    </changeSet>
+</databaseChangeLog>

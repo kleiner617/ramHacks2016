@@ -1,0 +1,25 @@
+{
+  "generator-jhipster": {
+    "jhipsterVersion": "3.7.1",
+    "baseName": "ramhacks2016",
+    "packageName": "com.vcu.ramhacks",
+    "packageFolder": "com/vcu/ramhacks",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": true,
+    "rememberMeKey": "9898f6258415b2e497d97accd4e839d39bddae1c",
+    "useSass": true,
+    "applicationType": "monolith",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}

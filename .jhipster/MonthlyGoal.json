@@ -1,0 +1,28 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "category",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "monthlyGoal"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "month",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "percentage",
+      "fieldType": "Double"
+    }
+  ],
+  "changelogDate": "20160918022307",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "monthly_goal"
+}
