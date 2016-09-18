@@ -36,7 +36,7 @@ node {
 	//sh "docker-compose -f src/main/docker/app.yml up"
     }
     stage('deployment'){
-        pkill docker-compose
+        sh "pkill docker-compose"
         sh "/usr/local/bin/docker-compose -f src/main/docker/app.yml up &"
     }
 }
