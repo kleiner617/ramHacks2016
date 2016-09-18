@@ -18,15 +18,14 @@
         <table class="jh-table table table-striped">
             <thead>
                 <tr>
-                    <th><span>ID</span></th>
+                    <!--<th><span>ID</span></th>-->
                     <th><span>Month</span></th>
                     <th><span>Percentage</span></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="monthlyGoal in vm.monthlyGoals track by monthlyGoal.id">
-                    <td><a ui-sref="monthly-goal-detail({id:monthlyGoal.id})">{{monthlyGoal.id}}</a></td>
+                    <!--<td><a ui-sref="monthly-goal-detail({id:monthlyGoal.id})">{{monthlyGoal.id}}</a></td>-->
                     <td>{{monthlyGoal.month}}</td>
                     <td>{{monthlyGoal.percentage}}</td>
                     <td class="text-right">

@@ -10,6 +10,7 @@
     function MonthlyGoalDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, MonthlyGoal, Category) {
         var vm = this;
 
+        vm.months = ["January", "February", "March"];
         vm.monthlyGoal = entity;
         vm.clear = clear;
         vm.save = save;
