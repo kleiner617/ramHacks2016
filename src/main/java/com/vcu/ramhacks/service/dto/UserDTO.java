@@ -3,17 +3,26 @@ package com.vcu.ramhacks.service.dto;
 import com.vcu.ramhacks.config.Constants;
 
 import com.vcu.ramhacks.domain.Authority;
+import com.vcu.ramhacks.domain.Purchase;
 import com.vcu.ramhacks.domain.User;
 
+import com.vcu.ramhacks.service.CapitalOneService;
 import org.hibernate.validator.constraints.Email;
+import org.springframework.web.client.RestTemplate;
 
+import javax.inject.Inject;
 import javax.validation.constraints.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 /**
  * A DTO representing a user, with his authorities.
  */
 public class UserDTO {
+
+    @Inject
+    CapitalOneService capitalOneService;
 
     @NotNull
     @Pattern(regexp = Constants.LOGIN_REGEX)
@@ -50,6 +59,8 @@ public class UserDTO {
     public UserDTO(String login, String firstName, String lastName,
         String email, boolean activated, String langKey, Set<String> authorities) {
 
+        CapitalOneService capitalOneService = new CapitalOneService();
+
         this.login = login;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -57,6 +68,7 @@ public class UserDTO {
         this.activated = activated;
         this.langKey = langKey;
         this.authorities = authorities;
+
     }
 
     public String getLogin() {
@@ -86,6 +98,7 @@ public class UserDTO {
     public Set<String> getAuthorities() {
         return authorities;
     }
+
 
     @Override
     public String toString() {
