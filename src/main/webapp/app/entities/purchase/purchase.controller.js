@@ -31,7 +31,13 @@
             {"purchaseId":"19", "type":"dining", "purchaseDate": "09/12/2016", "amount": "30.56", "description":"Lunch"},
             {"purchaseId":"20", "type":"entertainment", "purchaseDate": "09/12/2016", "amount": "20.11", "description":"The National"},
             {"purchaseId":"21", "type":"shopping", "purchaseDate": "09/12/2016", "amount": "90.78", "description":"Madewell"},
-            {"purchaseId":"22", "type":"gas", "purchaseDate": "09/12/2016", "amount": "19.60", "description":"gas"}
+            {"purchaseId":"22", "type":"gas", "purchaseDate": "09/12/2016", "amount": "19.60", "description":"gas"},
+            {"purchaseId":"31", "type":"food", "purchaseDate": "8/12/2016", "amount": "22.37", "description":"Subway"},
+            {"purchaseId":"45", "type":"entertainment", "purchaseDate": "7/12/2016", "amount": "5.22", "description":"netflix"},
+            {"purchaseId":"40", "type":"shopping", "purchaseDate": "2/12/2016", "amount": "5.65", "description":"Macy's"},
+            {"purchaseId":"67", "type":"education", "purchaseDate": "1/11/2016", "amount": "39.99", "description":"Udemy"},
+            {"purchaseId":"78", "type":"kids", "purchaseDate": "3/9/2016", "amount": "12.22", "description":"Pampers"},
+            {"purchaseId":"55", "type":"food + dining", "purchaseDate": "3/9/2016", "amount": "12.22", "description":"Boka"}
         ];
         console.log(vm.purchase[0].amount);
         loadAll();
