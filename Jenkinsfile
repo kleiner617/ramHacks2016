@@ -23,7 +23,7 @@ node {
     }
 
     stage('backend tests') {
-        sh "./mvnw test"
+        //sh "./mvnw test"
     }
 
     stage('frontend tests') {
