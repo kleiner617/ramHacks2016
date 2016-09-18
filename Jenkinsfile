@@ -34,6 +34,9 @@ node {
         //sh "./mvnw package -Pprod -DskipTests"
 	sh "./mvnw package -Pprod docker:build"
 	//sh "docker-compose -f src/main/docker/app.yml up"
-    sh "/usr/local/bin/docker-compose -f src/main/docker/app.yml up &"
+    }
+    stage('deployment'){
+        pkill docker-compose
+        sh "/usr/local/bin/docker-compose -f src/main/docker/app.yml up &"
     }
 }
