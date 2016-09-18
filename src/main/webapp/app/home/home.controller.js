@@ -13,7 +13,8 @@
         vm.currentMonth = null;
         vm.savings = 350;
         vm.numPoints = 350;
-        vm.imgSource = null;
+        vm.level = null;
+        vm.pointsToLevel = null;
 
         vm.account = null;
         vm.isAuthenticated = null;
@@ -23,15 +24,20 @@
             getAccount();
         });
 
+        determineLevel();
+
         function determineLevel(){
-            if (numPoints<200){
-                vm.imgSource = "content/images/level-1-icon.png";
+            if (vm.numPoints<200){
+                vm.level = 1;
+                vm.pointsToLevel = 200 - vm.numPoints;
             }
-            else if (numPoints < 500){
-                vm.imgSource = "content/images/level-1-icon.png";
+            else if (vm.numPoints < 500){
+                vm.level = 2;
+                vm.pointsToLevel = 500 - vm.numPoints;
             }
             else{
-                vm.imgSource = "content/images/level-1-icon.png";
+                vm.level = 3;
+                vm.pointsToLevel = 0;
             }
         }
 

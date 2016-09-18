@@ -20,27 +20,36 @@
         <div class="col-lg-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-clock-o fa-fw"></i> Your Savings Goal for the month is ${{vm.savings}}
+                    Your Savings Goal for the month is ${{vm.savings}}
                 </div>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                    Pretty graph...
                 </div>
-                <notifications></notifications>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <img ng-if = "vm.numPoints<200" class="center-block" src="content/images/level-1-icon.png">
-                    <img ng-if = "vm.numPoints<500 && vm.numPoints>201" class="center-block" src="content/images/level-2-icon.png">
-                    <img ng-if = "vm.numPoints>500" class="center-block" src="content/images/level-3-icon.png"></div>
+                    <img ng-if = "vm.level == 1" class="center-block" src="content/images/level-1-icon.png">
+                    <img ng-if = "vm.level == 2" class="center-block" src="content/images/level-2-icon.png">
+                    <img ng-if = "vm.level == 3" class="center-block" src="content/images/level-3-icon.png">
+                    <span>You are at level {{vm.level}}.  {{vm.pointsToLevel}} points until next level</span></div>
                 </div>
             </div>
         </div>
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Total Savings over ... months is
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </div>
 

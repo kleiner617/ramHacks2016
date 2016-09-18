@@ -24,8 +24,8 @@ public class MonthlyGoal implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name="categories")
-    private String [] categoriesChosen;
+    /*@Column(name="categories")
+    private String [] categoriesChosen;*/
 
     @Column(name = "month")
     private String month;
@@ -46,9 +46,9 @@ public class MonthlyGoal implements Serializable {
         this.id = id;
     }
 
-    public String [] getCat() {return categoriesChosen;}
+    /*public String [] getCat() {return categoriesChosen;}
 
-    public void setCat(String [] categories){this.categoriesChosen = categories;}
+    public void setCat(String [] categories){this.categoriesChosen = categories;}*/
 
     public String getMonth() {
         return month;
