@@ -9,7 +9,7 @@ services:
             - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/ramhacks2016?useUnicode=true&characterEncoding=utf8&useSSL=false
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
         ports:
-            - 9001:9001
+            - 8080:8080
     ramhacks2016-mysql:
         extends:
             file: mysql.yml
