@@ -40,10 +40,7 @@
 
         <div class="form-group">
             <label class="control-label" for="field_percentage">Categories</label>
-            <select class="form-control" name="month" id="field_month" ng-model="vm.monthlyGoal.month" ng-required="true">in
-                <input type="checkbox" class="form-control" name="percentage" id="field_percentage"
-                       ng-model="vm.categories"> Something </input>
-            </select>
+            <div ng-dropdown-multiselect="" options="categoriesdata" selected-model="vm.monthlyGoal.categories" extra-settings="categoriessettings"></div>
         </div>
 
     </div>

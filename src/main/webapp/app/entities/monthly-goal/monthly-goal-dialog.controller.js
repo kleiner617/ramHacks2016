@@ -24,6 +24,11 @@
             $uibModalInstance.dismiss('cancel');
         }
 
+        vm.monthlyGoal.categories = [];
+        $scope.categoriesdata = [ {id: "1", label: "food"}, {id: "2", label: "groceries"}, {id: "3", label: "entertainment"}];
+        $scope.categoriessettings = {displayProp: 'label'};
+
+
         function save () {
             vm.isSaving = true;
             if (vm.monthlyGoal.id !== null) {
