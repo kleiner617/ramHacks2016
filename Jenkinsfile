@@ -32,7 +32,7 @@ node {
 
     stage('packaging') {
         //sh "./mvnw package -Pprod -DskipTests"
-	sh "./mvnw package -Pprod docker:build"
+	sh "./mvnw -X package -Pprod docker:build"
 	//sh "docker-compose -f src/main/docker/app.yml up"
     }
     stage('deployment'){
